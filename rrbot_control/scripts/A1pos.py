@@ -32,10 +32,10 @@ rospy.Subscriber("/simple_model/up_to_shuttle_position_controller/state", JointC
 
 
 
-while num > -0.68 or num_2 > -0.68:  
+while num > -0.6115 or num_2 > -0.6115:  
     print num
     print num_2
-    position= -1.0
+    position= -0.6125
     rospy.loginfo(position) 
     pub_1.publish(position) 
     pub_2.publish(position)
