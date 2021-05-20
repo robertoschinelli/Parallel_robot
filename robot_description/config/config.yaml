@@ -1,0 +1,31 @@
+#simple_model is the name space
+simple_model:
+    # riferimento https://wiki.ros.org/ros_control
+    joint_state_controller:
+      type: joint_state_controller/JointStateController
+      publish_rate: 20
+
+    bridge_to_platform_position_controller:
+        #riceve la posizione e tramite PID modula lo sforzo per muovere il joint
+        #riferimento:https://wiki.ros.org/ros_control
+        #type: position_controllers/JointPositionController
+        #type: velocity_controllers/JointVelocityController
+        type: velocity_controllers/JointPositionController
+        joint: bridge_2_to_platform
+        pid: {p: 1.0, i: 0.0, d: 0.0}
+    up_to_shuttle_position_controller:
+        #riceve la posizione e tramite PID modula lo sforzo per muovere il joint
+        #riferimento:https://wiki.ros.org/ros_control
+        #type: position_controllers/JointPositionController
+        #type: velocity_controllers/JointVelocityController
+        type: velocity_controllers/JointPositionController
+        joint: up_4_to_shuttle_1
+        pid: {p: 1.0, i: 0.0, d: 0.0}
+    sup_to_nav_position_controller:
+        #riceve la posizione e tramite PID modula lo sforzo per muovere il joint
+        #riferimento:https://wiki.ros.org/ros_control
+        #type: position_controllers/JointPositionController
+        #type: velocity_controllers/JointVelocityController
+        type: velocity_controllers/JointPositionController
+        joint: sup_1_to_nav_1
+        pid: {p: 1.0, i: 0.0, d: 0.0}

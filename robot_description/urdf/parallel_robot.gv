@@ -1,0 +1,65 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"sup_1" [label="sup_1"];
+"nav_1" [label="nav_1"];
+"nav_2" [label="nav_2"];
+"up_3" [label="up_3"];
+"nav_4" [label="nav_4"];
+"up_4" [label="up_4"];
+"nav_3" [label="nav_3"];
+"shuttle_1" [label="shuttle_1"];
+"bridge_1" [label="bridge_1"];
+"bridge_2" [label="bridge_2"];
+"platform" [label="platform"];
+"arm" [label="arm"];
+"shuttle_2" [label="shuttle_2"];
+"roof_1" [label="roof_1"];
+"sup_2" [label="sup_2"];
+"sup_3" [label="sup_3"];
+"roof_2" [label="roof_2"];
+"roof_4" [label="roof_4"];
+"sup_4" [label="sup_4"];
+"roof_3" [label="roof_3"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_to_sup_1" [label="xyz: 0 0 0.7 \nrpy: 0 -0 0"]
+"base_to_sup_1" -> "sup_1"
+"sup_1" -> "sup_1_to_nav_1" [label="xyz: 0 0 0.5 \nrpy: 0 -0 0"]
+"sup_1_to_nav_1" -> "nav_1"
+"nav_1" -> "nav_1_to_nav_2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"nav_1_to_nav_2" -> "nav_2"
+"nav_2" -> "nav_2_to_up_3" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"nav_2_to_up_3" -> "up_3"
+"up_3" -> "up_3_to_nav_4" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"up_3_to_nav_4" -> "nav_4"
+"nav_1" -> "nav_1_to_up_4" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"nav_1_to_up_4" -> "up_4"
+"up_4" -> "up_4_to_nav_3" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"up_4_to_nav_3" -> "nav_3"
+"up_4" -> "up_4_to_shuttle_1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"up_4_to_shuttle_1" -> "shuttle_1"
+"shuttle_1" -> "shuttle_1_to_bridge_1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"shuttle_1_to_bridge_1" -> "bridge_1"
+"shuttle_1" -> "shuttle_1_to_bridge_2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"shuttle_1_to_bridge_2" -> "bridge_2"
+"bridge_2" -> "bridge_2_to_platform" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"bridge_2_to_platform" -> "platform"
+"platform" -> "platform_to_arm" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"platform_to_arm" -> "arm"
+"bridge_2" -> "bridge_2_to_shuttle_2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"bridge_2_to_shuttle_2" -> "shuttle_2"
+"sup_1" -> "sup_1_to_roof_1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"sup_1_to_roof_1" -> "roof_1"
+"base_link" -> "base_to_sup_2" [label="xyz: 0 0 0.7 \nrpy: 0 -0 0"]
+"base_to_sup_2" -> "sup_2"
+"base_link" -> "base_to_sup_3" [label="xyz: 0 0 0.7 \nrpy: 0 -0 0"]
+"base_to_sup_3" -> "sup_3"
+"sup_3" -> "sup_3_to_roof_2" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"sup_3_to_roof_2" -> "roof_2"
+"sup_3" -> "sup_3_to_roof_4" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"sup_3_to_roof_4" -> "roof_4"
+"base_link" -> "base_to_sup_4" [label="xyz: 0 0 0.7 \nrpy: 0 -0 0"]
+"base_to_sup_4" -> "sup_4"
+"sup_4" -> "sup_4_to_roof_3" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"sup_4_to_roof_3" -> "roof_3"
+}

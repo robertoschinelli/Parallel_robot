@@ -1,0 +1,815 @@
+<?xml version="1.0"?>
+<robot name="parallel_robot">
+
+
+<link name="base_link">
+
+  <visual>
+    <geometry>
+    <box size="2.0 2.0 0.05"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </visual>
+
+  <collision name="collision_base">
+    <geometry>
+    <box size="2.0 2.0 0.05"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </collision>
+
+  <inertial>
+    <mass value="50" />
+    <origin rpy="0 0 0" xyz="0 0 0.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+  </inertial>
+</link>
+
+
+<link name="roof_1">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 -1.0 0.7"/>
+  </visual>
+
+  <collision name="collision_roof_1">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 -1.0 0.7"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="roof_2">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 1.0 0.7"/>
+  </visual>
+
+  <collision name="collision_roof_2">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 1.0 0.7"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="roof_3">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="1.0 0.0 0.7"/>
+  </visual>
+
+  <collision name="collision_roof_3">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="1.0 0.0 0.7"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="roof_4">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="-1.0 0.0 0.7"/>
+  </visual>
+
+  <collision name="collision_roof_4">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="-1.0 0.0 0.7"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="sup_1">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 -1 0.0"/>
+  </visual>
+
+  <collision name="collision_sup_1">
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 -1 0.0"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+  </inertial>
+</link>
+
+
+<link name="sup_2">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 -1 0.0"/>
+  </visual>
+
+  <collision name="collision_sup_2">
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 -1 0.0"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+  </inertial>
+</link>
+
+
+
+<link name="sup_3">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 1 0.0"/>
+  </visual>
+
+  <collision name="collision_sup_3">
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 1 0.0"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="sup_4">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 1 0.0"/>
+  </visual>
+
+  <collision name="collision_sup_4">
+    <geometry>
+    <box size="0.05 0.05 1.4"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 1 0.0"/>
+  </collision>
+
+  <inertial>
+    <mass value="10" />
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="nav_1">
+
+  <visual>
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 -1 0.5"/>
+  </visual>
+
+  <collision name="collision_nav_1">
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 -1 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.5"/>
+  </inertial>
+</link>
+
+
+<link name="nav_2">
+
+  <visual>
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 -1 0.5"/>
+  </visual>
+
+  <collision name="collision_nav_2">
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 -1 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.0"/>
+    </inertial>
+</link>
+
+
+<link name="nav_3">
+
+  <visual>
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 1 0.5"/>
+  </visual>
+
+  <collision name="collision_nav_3">
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="-1 1 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="nav_4">
+
+  <visual>
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 1 0.5"/>
+  </visual>
+
+  <collision name="collision_nav_4">
+    <geometry>
+    <box size="0.1 0.1 0.3"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="1 1 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="up_3">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="1 0 0.5"/>
+  </visual>
+
+  <collision name="collision_up_3">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0 " xyz="1 0 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="up_4">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="-1 0 0.5"/>
+  </visual>
+
+  <collision name="collision_up_4">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="1.57075 0 0 " xyz="-1 0 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="shuttle_1">
+
+  <visual>
+    <geometry>
+    <box size="0.15 0.15 0.5"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="-1 0 0.5"/>
+  </visual>
+
+  <collision name="collision_shuttle_1">
+    <geometry>
+    <box size="0.15 0.15 0.5"/>
+    </geometry>
+    <origin rpy="1.57075 0 0 " xyz="-1 0 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="shuttle_2">
+
+  <visual>
+    <geometry>
+    <box size="0.15 0.15 0.5"/>
+    </geometry>
+    <origin rpy="1.57075 0 0" xyz="1 0 0.5"/>
+  </visual>
+
+  <collision name="collision_shuttle_2">
+    <geometry>
+    <box size="0.15 0.15 0.5"/>
+    </geometry>
+    <origin rpy="1.57075 0 0 " xyz="1 0 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="4" />
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="bridge_1">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 -0.12 0.5"/>
+  </visual>
+
+  <collision name="collision_bridge_1">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 -0.12 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<link name="bridge_2">
+
+  <visual>
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 0.12 0.5"/>
+  </visual>
+
+  <collision name="collision_bridge_2">
+    <geometry>
+    <box size="0.05 0.05 2.05"/>
+    </geometry>
+    <origin rpy="0 1.57075 0" xyz="0 0.12 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 1.025"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>
+
+
+<link name="platform">
+
+  <visual>
+    <geometry>
+    <box size="0.4 0.4 0.1"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0.5"/>
+  </visual>
+
+  <collision name="collision_platform">
+    <geometry>
+    <box size="0.4 0.4 0.1"/>
+    </geometry>
+    <origin rpy="0 0 0 " xyz="0 0 0.5"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+
+
+<!--<link name="arm">
+
+  <visual>
+    <geometry>
+    <cylinder length="0.4" radius="0.04"/>
+    </geometry>
+    <origin rpy="0 0 0" xyz="0 0 0.25"/>
+  </visual>
+
+  <collision name="collision_arm">
+    <geometry>
+    <cylinder length="0.4" radius="0.04"/>
+    </geometry>
+    <origin rpy="0 0 0 " xyz="0 0 0.25"/>
+  </collision>
+
+  <inertial>
+    <mass value="2" />
+    <origin rpy="0 0 0" xyz="0 0 0.2"/>
+    <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+</link>-->
+
+
+<!--JOINTS-->
+
+
+<joint name="base_to_sup_1" type="fixed">
+  <parent link="base_link"/>
+  <child link="sup_1"/>
+  <origin xyz="0 0 0.7"/>
+</joint>
+
+
+<joint name="base_to_sup_2" type="fixed">
+  <parent link="base_link"/>
+  <child link="sup_2"/>
+  <origin xyz="0 0 0.7"/>
+</joint>
+
+
+<joint name="base_to_sup_3" type="fixed">
+  <parent link="base_link"/>
+  <child link="sup_3"/>
+  <origin xyz="0 0 0.7"/>
+</joint>
+
+
+<joint name="base_to_sup_4" type="fixed">
+  <parent link="base_link"/>
+  <child link="sup_4"/>
+  <origin xyz="0 0 0.7"/>
+</joint>
+
+
+<joint name="sup_1_to_roof_1" type="fixed">
+  <parent link="sup_1"/>
+  <child link="roof_1"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="sup_3_to_roof_2" type="fixed">
+  <parent link="sup_3"/>
+  <child link="roof_2"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="sup_4_to_roof_3" type="fixed">
+  <parent link="sup_4"/>
+  <child link="roof_3"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="sup_3_to_roof_4" type="fixed">
+  <parent link="sup_3"/>
+  <child link="roof_4"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="sup_1_to_nav_1" type="prismatic">
+  <parent link="sup_1"/>
+  <child link="nav_1"/>
+  <axis xyz="0 0 1"/>
+  <limit effort="1000.0" lower="-1.5" upper="-0.5" velocity="0.5"/>
+  <origin xyz="0 0 0.5"/>
+</joint>
+
+
+<joint name="nav_1_to_nav_2" type="fixed">
+  <parent link="nav_1"/>
+  <child link="nav_2"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="nav_1_to_up_4" type="fixed">
+  <parent link="nav_1"/>
+  <child link="up_4"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="up_4_to_nav_3" type="fixed">
+  <parent link="up_4"/>
+  <child link="nav_3"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="nav_2_to_up_3" type="fixed">
+  <parent link="nav_2"/>
+  <child link="up_3"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="up_3_to_nav_4" type="fixed">
+  <parent link="up_3"/>
+  <child link="nav_4"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="up_4_to_shuttle_1" type="prismatic">
+  <parent link="up_4"/>
+  <child link="shuttle_1"/>
+  <axis xyz="0 1 0"/>
+  <limit effort="1000.0" lower="-0.7" upper="0.7" velocity="0.5"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="shuttle_1_to_bridge_1" type="fixed">
+  <parent link="shuttle_1"/>
+  <child link="bridge_1"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="shuttle_1_to_bridge_2" type="fixed">
+  <parent link="shuttle_1"/>
+  <child link="bridge_2"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<joint name="bridge_2_to_shuttle_2" type="fixed">
+  <parent link="bridge_2"/>
+  <child link="shuttle_2"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+
+<joint name="bridge_2_to_platform" type="prismatic">
+  <parent link="bridge_2"/>
+  <child link="platform"/>
+  <limit effort="1000.0" lower="-0.7" upper="0.7" velocity="0.5"/>
+  <origin xyz="0 0 0"/>
+</joint>
+
+
+<!--<joint name="platform_to_arm" type="fixed">
+  <parent link="platform"/>
+  <child link="arm"/>
+  <origin xyz="0 0 0"/>
+</joint>-->
+
+
+
+<!-- ADDING TEXTURES-->
+<gazebo reference ="base_link">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="sup_1">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="sup_2">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="sup_3">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="sup_4">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="roof_1">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="roof_2">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="roof_3">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="roof_4">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="up_3">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="up_4">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="bridge_1">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="bridge_2">
+  <material>Gazebo/DarkGrey</material>
+</gazebo>
+
+
+<gazebo reference ="nav_1">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="nav_2">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="nav_3">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="nav_4">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="shuttle_1">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="shuttle_2">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+<gazebo reference ="platform">
+  <material>Gazebo/Turquoise</material>
+</gazebo>
+
+
+
+<!--                GAZEBO RELATED PART                             -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+	  <!--il nome deve coincidere con quello nello yaml file-->
+      <robotNamespace>/simple_model</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>true</legacyModeNS>
+    </plugin>
+  </gazebo>
+
+
+  <!-- La trasmissione permette di controllare il joint. -->
+  <transmission name="bridge_platform">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor1">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="bridge_2_to_platform">
+      <!--interfaccia di posizione: https://wiki.ros.org/ros_control-->
+      <!--hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface-->
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+
+  <!-- La trasmissione permette di controllare il joint. -->
+  <transmission name="up_to_shuttle">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor2">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="up_4_to_shuttle_1">
+      <!--interfaccia di posizione: https://wiki.ros.org/ros_control-->
+      <!--hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface-->
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+
+  <!-- La trasmissione permette di controllare il joint. -->
+  <transmission name="sup_to_nav">
+    <type>transmission_interface/SimpleTransmission</type>
+    <actuator name="motor3">
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    <joint name="sup_1_to_nav_1">
+      <!--interfaccia di posizione: https://wiki.ros.org/ros_control-->
+      <!--hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface-->
+      <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    </joint>
+  </transmission>
+
+
+</robot>
