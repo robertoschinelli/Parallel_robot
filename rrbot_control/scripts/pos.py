@@ -5,8 +5,8 @@ from std_msgs.msg import Float64
 from control_msgs.msg import JointControllerState
 
 
-var = raw_input("inserire coordinate: ")
-print "coordinate inserite:", var
+var = raw_input("enter coordinates: ")
+print "you entered", var
 
 if var in 'A1':
  	print ("sposto in posizione A1")
@@ -39,8 +39,8 @@ if var in 'A1':
 
 
 	while num > -0.6115 or num_2 > -0.6115:
-		print num
-		print num_2
+   		print num
+    		print num_2
     		position= -0.6125
     		rospy.loginfo(position)
     		pub_1.publish(position)
@@ -79,8 +79,8 @@ elif var in 'B1':
 
 
 	while (num > -0.4365 or num < -0.4385) or num_2 > -0.6115:
-		print num
-		print num_2
+   		print num
+    		print num_2
     		position= -0.4375
     		rospy.loginfo(position)
     		pub_1.publish(position)
@@ -204,7 +204,7 @@ elif var in 'E1':
 
 
 	while (num < 0.0865 or num < 0.0885) or num_2 > -0.6115:
-   	    	print num
+   		print num
     		print num_2
     		position= 0.0875
     		rospy.loginfo(position)
@@ -286,7 +286,7 @@ elif var in 'G1':
 
 
 	while (num < 0.4365 or num > 0.4385) or num_2 > -0.6115:
-   	    	print num
+   		print num
     		print num_2
     		position= 0.4375
     		rospy.loginfo(position)
@@ -1412,7 +1412,7 @@ elif var in 'C5':
 
 
 	while (num < -0.2635 or num > -0.2615) or (num_2 < 0.0865 or num_2 > 0.0885):
-   		    print num
+   		print num
     		print num_2
     		position= -0.2625
     		rospy.loginfo(position)
@@ -2584,7 +2584,3 @@ elif var in 'H8':
     		pub_1.publish(position)
     		pub_2.publish(position)
     		rate.sleep()
-
-
-else :
-    print("coordinate sbagliate")

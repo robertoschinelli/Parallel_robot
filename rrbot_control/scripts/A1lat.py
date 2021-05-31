@@ -14,12 +14,12 @@ def my_callback(event):
 
 rospy.init_node('robot_talker', anonymous=False)
 rate=rospy.Rate(2)
-rospy.Timer(rospy.Duration(6), my_callback)
+rospy.Timer(rospy.Duration(10), my_callback)
 
 
 
 while not rospy.is_shutdown():
-    position= -1.0
+    position= -0.68
     rospy.loginfo(position) #printa il numero nella shell
     pub_1.publish(position) #pubblica nel topic
     pub_2.publish(position)

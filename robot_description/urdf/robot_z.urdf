@@ -565,7 +565,7 @@
   <origin xyz="0 0 0"/>
 </joint>
 
-
+<!-- asse x -->
 <joint name="sup_1_to_nav_1" type="prismatic">
   <parent link="sup_1"/>
   <child link="nav_1"/>
@@ -609,12 +609,12 @@
   <origin xyz="0 0 0"/>
 </joint>
 
-
+<!-- asse y -->
 <joint name="up_4_to_shuttle_1" type="prismatic">
   <parent link="up_4"/>
   <child link="shuttle_1"/>
   <axis xyz="0 1 0"/>
-  <limit effort="1000.0" lower="-0.7" upper="0.7" velocity="0.5"/>
+  <limit effort="1000.0" lower="-1.5" upper="1.5" velocity="0.5"/>
   <origin xyz="0 0 0"/>
 </joint>
 
@@ -644,7 +644,7 @@
 <joint name="bridge_2_to_platform" type="prismatic">
   <parent link="bridge_2"/>
   <child link="platform"/>
-  <limit effort="1000.0" lower="-0.7" upper="0.7" velocity="0.5"/>
+  <limit effort="1000.0" lower="-1.5" upper="1.5" velocity="2.5"/>
   <origin xyz="0 0 0"/>
 </joint>
 
