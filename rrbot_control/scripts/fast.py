@@ -56,3 +56,4 @@ while (abs(letter - (num-0.001)) > 0.005) or (abs(number - (num_2-0.001)) > 0.00
     pub_1.publish(position)
     pub_2.publish(position_2)
     rate.sleep()
+

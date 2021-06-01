@@ -59,38 +59,32 @@ while (abs(letter - (num-0.001)) > 0.005) or (abs(number - (num_2-0.001)) > 0.00
     pub_2.publish(position_2)
     rate.sleep()
 
-var_2 = raw_input("do you want to pick the object? y/n ")
+
+num_3 = 1
+def callback_3(msg):
+    global num_3
+    num_3 = msg.process_value
+rospy.Subscriber("/simple_model/sup_to_nav_position_controller/state", JointControllerState, callback_3)
+
+#conditions
+while (num_3 > -1.49):
+    print ("Vertical position:        " "%.3f" % num_3)
+    down_position= -1.5
+    rospy.loginfo(down_position)
+    pub_3.publish(down_position)
+    rate.sleep()
 
 
-if var_2 == 'y':
-    num_3 = 0.7
-    def callback_3(msg):
-        global num_3
-        num_3 = msg.process_value
-    rospy.Subscriber("/simple_model/sup_to_nav_position_controller/state", JointControllerState, callback_3)
-
-    #conditions
-    while (num_3 > -1.49):
-        print ("Vertical position:        " "%.3f" % num_3)
-        down_position= -1.5
-        rospy.loginfo(down_position)
-        pub_3.publish(down_position)
-        rate.sleep()
-
-
-    num_4 = -1.7
-    def callback_4(msg):
-        global num_4
-        num_4 = msg.process_value
+num_4 = -1.7
+def callback_4(msg):
+    global num_4
+    num_4 = msg.process_value
     rospy.Subscriber("/simple_model/sup_to_nav_position_controller/state", JointControllerState, callback_4)
 
-        #conditions
-    while (num_4 < -0.51):
-        print ("Vertical position:        " "%.3f" % num_4)
-        up_position= -0.499
-        rospy.loginfo(up_position)
-        pub_4.publish(up_position)
-        rate.sleep()
-
-elif var_2 == 'n':
-    print "current position: ", var
+#conditions
+while (num_4 < -0.51):
+    print ("Vertical position:        " "%.3f" % num_4)
+    up_position= -0.499
+    rospy.loginfo(up_position)
+    pub_4.publish(up_position)
+    rate.sleep()
