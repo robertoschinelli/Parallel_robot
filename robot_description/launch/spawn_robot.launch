@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+
+    <!--<param name="red_box_path" type="str" value="path_to_robot_description/urdf/rbox.urdf" />
+    <param name="red_box_path" type="str" value="$(find robot_description)/urdf/rbox.urdf" />-->
+    <param name="box" command="$(find xacro)/xacro --inorder $(find robot_description)/urdf/rbox.urdf" />
     <param name="robot_description" command="$(find xacro)/xacro --inorder $(find robot_description)/urdf/robot_z.urdf" />
 
     <!--posizione iniziale robot-->
@@ -24,6 +28,8 @@
     <arg name="debug" value="$(arg debug)"/>
     </include>
 
+    <node name="red_box" pkg="gazebo_ros" type="spawn_model" output="screen"
+          args="-urdf -param box -model my_box -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" />
 
     <node name="my_robot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
           args="-urdf -param robot_description -model my_robot -x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" />

@@ -509,7 +509,6 @@
 
 <!--JOINTS-->
 
-
 <joint name="base_to_sup_1" type="fixed">
   <parent link="base_link"/>
   <child link="sup_1"/>
